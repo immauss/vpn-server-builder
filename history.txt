@@ -1,0 +1,997 @@
+    1  yum search repo
+    2  yum install epel-release
+    3  yum search openvpn 
+    4  yum search 389
+    5  yum search FreeIPA 
+    6  yum search ^ipa
+    7  yum search ipa
+    8  yum search ipa-server
+    9  iptables -nvL 
+   10  systemctl status firewalld 
+   11  yum search openvpn 
+   12  yum search ipa-server
+   13  yum install ipa-server openvpn-auth-ldap 
+   14  lsof -i | less
+   15  rpm -aq | grep dns
+   16  yum install ip-server-dns 
+   17  yum install ipa-server-dns 
+   18  ls
+   19  hostnamectl set-hostname  vpn1.immauss.com 
+   20  exit
+   21  ls
+   22  ipa-server-install --help 
+   23  yum install tmux -y 
+   24  tmux 
+   25  exit
+   26  hostname -l
+   27  hostname 
+   28  ls
+   29  clear
+   30  tmux 
+   31  ipa-server-install --help |less 
+   32  ip a
+   33  dig vpn1.immauss.com
+   34  ping vpn.immauss.com
+   35  ipa-server-install --help | less
+   36  ipa-server-install 
+   37  dig -x 198.74.62.1
+   38  vim /etc/hosts
+   39  ipa-server-install 
+   40  lsof -i 
+   41  nc vpn1.immauss.com 389
+   42  dnf install netcat 
+   43  yum install netcat 
+   44  y
+   45  yum install nc 
+   46  nc vpn1.immauss.com 389
+   47  firewall-cmd --add-service ldap 
+   48  nc vpn1.immauss.com 389
+   49  fireall-cmd --reload 
+   50  firewall-cmd --reload 
+   51  firewall-cmd --list-all 
+   52  ipa-server-install 
+   53  ipa-server-install --uninstall 
+   54  ipa-server-install 
+   55  less /var/log/ipaserver-install.log
+   56  ipa-server-install --uninstall 
+   57  nc -l 389
+   58  ipa-server-install --uninstall 
+   59  ipa-server-install --help | less
+   60  ipa-server-install --setup-dns
+   61  hostnamectl set-hostname  node1.vpn.immauss.com 
+   62  hostname 
+   63  exit
+   64  hostname 
+   65  ipa-server-install --setup-dns
+   66  vim /etc/hosts
+   67  ipa-server-install --setup-dns
+   68  top
+   69  journalctl | grep -i oom 
+   70  date
+   71  nc localhost 389
+   72  nc vpn1.immauss.com 389
+   73  ip a
+   74  nc 198.74.62.195 389
+   75  ping vpn1.immauss.com 
+   76  vim /etc/hosts
+   77  ip-server-install 
+   78  ipa-server-install 
+   79  tmux a
+   80  ipa-server-install --uninstall 
+   81  ipa-server-install --setup-dns
+   82  tmux 
+   83  tmux a
+   84  yum install fail2ban 
+   85  cd /etc/fail2ban/
+   86  ls
+   87  vim fail2ban.conf 
+   88  cd fail2ban.d/
+   89  ls
+   90  cd ..
+   91  vim fail2ban.conf 
+   92  yum search fail2ban 
+   93  systemctl enable fail2ban --now 
+   94  systemctl status fail2ban 
+   95  cd /var/log/
+   96  tail -f fail2ban.log
+   97  ls -ltr
+   98  tail secure
+   99  grep -c "Failed password" secure 
+  100  awk /"Failed password for invalid"/'{print $11}'
+  101  awk /"Failed password for invalid"/'{print $11}' secure 
+  102  awk /"Failed password for invalid"/'{print $11}' secure  | sort | uniq -c | sort -n 
+  103  systemctl status fail2ban
+  104  cd /etc/
+  105  ls fail2ban/
+  106  cd fail2ban/
+  107  ls
+  108  vim fail2ban.conf 
+  109  ls
+  110  ls */* 
+  111  ls
+  112  cd fail2ban.d/
+  113  ls
+  114  cd ../filter.d/
+  115  ls
+  116  vim sshd.conf 
+  117  rpm -qa | grep vpn 
+  118  rpm -ql openvpn-auth-ldap 
+  119  cd /usr/share/doc/openvpn-auth-ldap-2.0.3/
+  120  ls
+  121  less README 
+  122  ls
+  123  vim auth-ldap.conf 
+  124  cat READ
+  125  cat README 
+  126  vim auth-ldap.conf 
+  127  tmux 
+  128  tmux a
+  129  cd /var/log/
+  130  ls -ltr
+  131  cd /var/log/
+  132  tail fail2ban.log
+  133  systemctl status fail2ban 
+  134  systemctl restart fail2ban 
+  135  ls -ltr 
+  136  tail fail2ban.log
+  137  iptables -nvL | less 
+  138  tail -f fail2ban.log`
+  139  tail -f fail2ban.log
+  140  cd /etc/
+  141  ls fail2ban/
+  142  cd fail2ban/
+  143  ls
+  144  vim fail2ban.conf 
+  145  vim paths-fedora.conf 
+  146  grep ssh * 
+  147  vim jail.conf 
+  148  cd /usr/share/doc/
+  149  ls
+  150  cd openvpn-
+  151  cd openvpn-2.4.7/
+  152  ls
+  153  cd sample/
+  154  ls
+  155  cd sample-config-files/
+  156  ls
+  157  cp roadwarrior-server.conf /etc/openvpn/server/server.conf 
+  158  systemctl enable openvpn@server 
+  159  systemctl status openvpn@server 
+  160  systemctl start openvpn@server 
+  161  cd /etc/openvpn/
+  162  ls
+  163  cd server/server.conf 
+  164  cd server/
+  165  mv server.conf ..
+  166  systemctl start openvpn@server 
+  167  exit
+  168  cd /etc/ssh/
+  169  vim sshd_config 
+  170  systemctl restart sshd 
+  171  vim sshd_config 
+  172  systemctl restart sshd 
+  173  vim sshd_config 
+  174  systemctl restart sshd 
+  175  vim sshd_config 
+  176  systemctl restart sshd 
+  177  cd 
+  178  cd /usr/share/doc/openvpn-
+  179  cd /usr/share/doc/openvpn-2.4.7/
+  180  ls
+  181  vim README
+  182  less README.systemd 
+  183  tmux a
+  184  p[wd
+  185  pwd
+  186  ls
+  187  cd /etc/openvpn/auth/
+  188  ls
+  189  cp /usr/share/doc/openvpn-auth-ldap-2.0.3/auth-ldap.conf .
+  190  vim auth-ldap.conf 
+  191  grep ldap etc/ser
+  192  grep ldap /etc/services 
+  193  nc localhost 389
+  194  nc localhost 636
+  195  lsof -i -P | grep 389
+  196  vim auth-ldap.conf 
+  197  cd /etc/openvpn/
+  198  ls
+  199  cd server/
+  200  ls
+  201  cd
+  202  systemctl start openvpn 
+  203  cd /usr/share/doc/openvpn-2.4.7/
+  204  ls
+  205  cd contrib/
+  206  ls
+  207  cd ../sample/
+  208  ls
+  209  cd sample-
+  210  cd sample-config-files/
+  211  ls
+  212  vim 
+  213  ls
+  214  vim server.conf 
+  215  grep plugin * 
+  216  vim server.conf 
+  217  ls 0-ltr
+  218  ls -ltr
+  219  vim roadwarrior-server.conf 
+  220  cd /etc/openvpn/
+  221  ls
+  222  rm server.conf 
+  223  cd server/
+  224  ls
+  225  vim server.conf
+  226  cat server.conf 
+  227  file /usr/lib/openvpn/plugin/lib/openvpn-auth-ldap.so
+  228  rpm -ql openvpn-auth-ldap
+  229  vim server.conf
+  230  cat server.conf 
+  231  file /usr/lib64/openvpn/plugin/lib/openvpn-auth-ldap.so
+  232  cd
+  233  vim /etc/openvpn/auth/ldap.conf 
+  234  cd /etc/openvpn/auth/
+  235  mv ldap.conf orig-ldap.conf
+  236  vim ldap.conf
+  237  cd ../server/
+  238  ls
+  239  systemctl enable openvpn-server server --now
+  240  systemctl enable openvpn-server@server --now
+  241  journalctl -xe 
+  242  pwd
+  243  cd ..
+  244  ls
+  245  cd auth/
+  246  ls
+  247  cd ..
+  248  ls
+  249  find /etc/
+  250  find /etc/ -iname "*.crt" 
+  251  cd /etc/ipa/
+  252  ls
+  253  journalctl -xe 
+  254  pwd
+  255  ls
+  256  cd /usr/share/doc/openvpn-2.4.7/
+  257  ls
+  258  cd sample/
+  259  ls
+  260  cd sample-config-files/
+  261  ls
+  262  vim roadwarrior-server.conf 
+  263  ipa-getcert 
+  264  cd
+  265  journalctl -xe 
+  266  mkdir certs
+  267  cd certs/
+  268  ipa-getcert request -f server.crt
+  269  ls
+  270  ls -l
+  271  ls
+  272  man ipa-getcert 
+  273  man openv pn 
+  274  man openvpn
+  275  pwd
+  276  cd /usr/share/doc/openvpn-2.4.7/
+  277  ls
+  278  cd sample/
+  279  ls
+  280  cd sample-scripts/
+  281  ls
+  282  cd ..
+  283  ls
+  284  cd 
+  285  rpm -ql openvpn
+  286  man openvpn 
+  287  cd
+  288  man cert-setup.sh
+  289  vim cert-setup.sh
+  290  ipa-server-install --setup-dns
+  291  vim setup-complete.txt
+  292  mv setup-complete.txt ipa-setup-complete.txt 
+  293  cd /etc/openvpn/
+  294  ls
+  295  cd server 
+  296  ls
+  297  cd ../client/
+  298  ls
+  299  cd ../auth/
+  300  ls
+  301  cd..
+  302  pwd
+  303  cd ..
+  304  pwd
+  305  ls
+  306  pwd
+  307  ls -ltr
+  308  cd 
+  309  cd /usr/share/doc/openvpn-auth-ldap-2.0.3/
+  310  ls
+  311  cat auth-ldap.conf 
+  312  vim auth-ldap.conf 
+  313  ls
+  314  less README 
+  315  cd ..
+  316  cd openvpn-2.4.7/`
+  317  ls
+  318  cd openvpn-2.4.7/
+  319  ls
+  320  ls -l
+  321  lsof -i 
+  322  cd
+  323  firewall-cmd --add-service https 
+  324  tcpdump -ni eth0 port 443 
+  325  yum install tcpdump -y 
+  326  tcpdump -ni eth0 port 443 
+  327  dig node1.vpn.immauss.com 
+  328  ip a
+  329  pwd
+  330  cd /etc/openvpn/
+  331  ls
+  332  cd server/
+  333  ls
+  334  mkdir server.keys
+  335  cd server.
+  336  cd server.keys/
+  337  ls
+  338  openssl req -nodes -new -x509 -keyout ca.key -out ca.crt
+  339  ls -l
+  340   openssl req -nodes -new -keyout mycert.key -out mycert.csr --ca ca.crt
+  341   openssl req -nodes -new -keyout mycert.key -out mycert.csr
+  342  ls
+  343  openssl ca -out mycert.crt -in mycert.csr
+  344  ls /etc/pki/CA/private/
+  345  less ca.key 
+  346  cp ca.key /etc/pki/CA/private/cakey.pem 
+  347  openssl ca -out mycert.crt -in mycert.csr
+  348  cp ca.crt /etc/pki/CA/cacert.pem
+  349  openssl ca -out mycert.crt -in mycert.csr
+  350  ls
+  351  touch /etc/pki/CA/index.txt
+  352  openssl ca -out mycert.crt -in mycert.csr
+  353  cd /etc/pki/CA/
+  354  ls
+  355  rm /etc/pki/CA/private/cakey.pem 
+  356  ls
+  357  rm cacert.pem index.txt 
+  358  ls
+  359  cd newcerts/
+  360  ls
+  361  cd ../private/
+  362  ls
+  363  cd ../crl/
+  364  ls
+  365  cd ../certs/
+  366  ls
+  367  cd /var/lib/certmonger/
+  368  ls
+  369  cd requests/
+  370  ls
+  371  ls -l
+  372  ls -ltr
+  373  cat 20190807095712
+  374  less 20190807095712
+  375  ls -l
+  376  cat 20190624201538
+  377  less 20190624201538
+  378  rpm -ql openvpn-auth-ldap 
+  379  less /usr/share/doc/openvpn-auth-ldap-2.0.3/README
+  380  rpm -qi openvpn-auth-ldap 
+  381  cd /etc/openvpn/
+  382  ls
+  383  cd server/
+  384  ls
+  385  vim server.conf 
+  386  cd /usr/share/
+  387  find . -iname "*rsa*" 
+  388  find . -iname "*rsa*" -type c
+  389  find . -iname "*rsa*" -type d
+  390  yum search easy-rsa
+  391  yum update -y && yum -y install easy-rsa 
+  392  top
+  393  journalctl | grep -i oom 
+  394  top
+  395  journalctl | grep -i oom 
+  396  top
+  397  systemctl status
+  398  systemctl list-units 
+  399  systemctl list-units state-failed
+  400  systemctl list-units --state=failed
+  401  journalctl -xe 
+  402  systemctl list-units --state=failed
+  403  systemctl status named-pkcs11.service
+  404  poweroff
+  405  ls
+  406  who
+  407  last
+  408  name 
+  409  yum history 
+  410  yum history info 9
+  411  yum history info 5
+  412  lsof -i 
+  413  dig node1.vpn.immauss.com 
+  414  ls
+  415  cat ipa-setup-complete.txt 
+  416  firewall-cmd --list-all 
+  417  ls
+  418  cat ipa-setup-complete.txt 
+  419  cat /etc/*release
+  420  ls /home/
+  421  top
+  422  pwd
+  423  df -h
+  424  mkswap /tmp/swap.mem 
+  425  man mkswap 
+  426  dd if=/dev/null of=/tmp/swap.mem size=1G count=2
+  427  dd if=/dev/null of=/tmp/swap.mem bs=1G count=2
+  428  ls -lah /tmp/swap.mem 
+  429  dd if=/dev/null of=/tmp/swap.mem bs=1G count=20
+  430  dd if=/dev/zero of=/tmp/swap.mem bs=1G count=2
+  431  mkswap /tmp/swap.mem 
+  432  vim /etc/fstab 
+  433  swapon /tmp/swap.mem 
+  434  chmod 0600 /tmp/swap.mem 
+  435  top
+  436  tmux a
+  437  tmux 
+  438  tmux a
+  439  yum update -y 
+  440  ~,~.
+  441  ~.
+  442  yum update
+  443  yum install -y yum-utils 
+  444  yum-complete-transaction 
+  445  systemctl status 
+  446  systemctl list-units --state=failed 
+  447  systemctl status dirsrv@IMMAUSS-COM
+  448  systemctl status dirsrv@IMMAUSS-COM --long
+  449  systemctl status dirsrv@IMMAUSS-COM -l
+  450  vim /usr/lib/systemd/system/dirsrv@.service
+  451  systemctl start dirsrv@IMMAUSS-COM 
+  452  journalctl -xe 
+  453  systemctl disable openvpn@server
+  454  journalctl -xe 
+  455  systemctl start dirsrv@IMMAUSS-COM 
+  456  systemctl status dirsrv@IMMAUSS-COM 
+  457  ~.
+  458  ipa-server-install 
+  459  ipa-server-install --uninstall
+  460  ipa-server-install --setup-dns
+  461  systemctl status 
+  462  systemctl list-units --state=failed 
+  463  systemctl status dirsrv@IMMAUSS-COM 
+  464  systemctl restart  dirsrv@IMMAUSS-COM 
+  465  journalctl -xe 
+  466  ps axwu | grep dir
+  467  reboot 
+  468  systemctl list-units --state=failed 
+  469  journalctl -xe 
+  470  systemctl list-units --state=failed 
+  471  systemctl status dirsrv@IMMAUSS-COM.service
+  472  systemctl status dirsrv@IMMAUSS-COM.service -l 
+  473  systemctl list-units | grep dirsrv
+  474  lsof -i | drsrv
+  475  yum install lsof 
+  476  lsof -i 
+  477  lsof -i -P | grep 389
+  478  lsof -i -P | grep dirsrv
+  479  systemctl list-unit-files | grep dirsrv
+  480  systemctl list-units | grep dirsrv 
+  481  ipa-server-install --uninstall
+  482  ipa-server-install --help
+  483  ipa-server-install --help |less
+  484  ipa-server-install --setup-dns
+  485  systemctl status 
+  486  systemctl list-units --state=failed 
+  487  journalctl -xe
+  488  systemctl status dirsrv*
+  489  tmux a
+  490  tmux 
+  491  ls -ltr
+  492  tail ipa-setup-complete.txt 
+  493  ls
+  494  ls -l
+  495  cat ipa-setup-complete.txt 
+  496  cd /var/log/
+  497  ls -ltr
+  498  tail ipaserver-install.log 
+  499  cd /etc/
+  500  ls
+  501  cd pki/
+  502  ls
+  503  cd CA/
+  504  ls
+  505  cd certs/
+  506  ls
+  507  cd ../crl/
+  508  ls
+  509  cd ../newcerts/
+  510  ls
+  511  cd ../private/
+  512  ls
+  513  cd ..
+  514  ls
+  515  cd ..
+  516  pwd
+  517  cd ..
+  518  ls
+  519  yum install easy-rsa 
+  520  systemctl list-units --state=failed 
+  521  systemctl disable dirsrv@IMMAUSS-COM.service
+  522  systemctl disable dirsrv@IMMAUSS-COM.service --now 
+  523  systemctl list-units --state=failed 
+  524  rpm -ql easy-rsa
+  525  cp -rp /usr/share/easy-rsa . 
+  526  mv easy-rsa/ ~/
+  527  cd
+  528  cd easy-rsa/3
+  529  ls
+  530  ./easyrsa 
+  531  ./easyrsa build-ca 
+  532  ls
+  533  cd x509-types/
+  534  ls
+  535  ls -l
+  536  file *
+  537  cat ca 
+  538  cd
+  539  man easyrsa
+  540  rpm -ql easyrsa
+  541  rpm -ql easy-rsa 
+  542  less /usr/share/doc/easy-rsa-3.0.3/README.quickstart.md
+  543  cd easy-rsa/
+  544  ls
+  545  pwd
+  546  ls
+  547  cd 3
+  548  ls
+  549  ./easyrsa init-pki
+  550  ./easyrsa build-ca
+  551  ls
+  552  cd pki/
+  553  ls
+  554  cd
+  555  ls -ltr
+  556  pwd
+  557  find / -name cert-setup.sh 
+  558  vim cert-setup.sh 
+  559  ls *.swp
+  560  ls -la
+  561  rm .cert-setup.sh.swp 
+  562  vim cert-setup.sh 
+  563  chmod 755 cert-setup.sh 
+  564  ls -ltr
+  565  cat cert-setup.sh 
+  566  ./cert-setup.sh 
+  567  vim cert-setup.sh 
+  568  cd /usr/share/easy-rsa/
+  569  ls
+  570  cat ~/cert-setup.sh 
+  571  ls /etc/openvpn/
+  572  file /usr/share/easy-rsa/3.0.3/easyrsa
+  573  cd /usr/share/easy-rsa/3.0.3/
+  574  ls
+  575  vim
+  576  vim ~/cert-setup.sh 
+  577  cd
+  578  ./cert-setup.sh 
+  579  rm /etc/openvpn/easyrsa 
+  580  ./cert-setup.sh 
+  581  vim ~/cert-setup.sh 
+  582  cd /etc/openvpn/easyrsa
+  583  ls
+  584  cd
+  585  vim ~/cert-setup.sh 
+  586  ./cert-setup.sh 
+  587  cd /etc/openvpn/
+  588  ls
+  589  cd auth/
+  590  ls
+  591  cd ../easyrsa/
+  592  ls
+  593  vim easyrsa 
+  594  ./easyrsa gen-dh 
+  595  ./easyrsa 
+  596  less /usr/share/doc/easy-rsa-3.0.3/README.quickstart.md
+  597  ./easyrsa build-server-full 
+  598  ./easyrsa build-server-full vpn-server 
+  599  ls pki/private/*
+  600  pwd
+  601  find . -iname "*vpn-server*" 
+  602  vim ../server/server.conf 
+  603  system
+  604  systemctl enable openvpn-server@server --now 
+  605  systemctl status openvpn-server@server 
+  606  tmux a
+  607  pwd
+  608  cd
+  609  pwd
+  610  mkdir ITS-vpn-build
+  611  cd ITS-vpn-build/
+  612  ls
+  613  pwd
+  614  ls -ltr
+  615  mkdir -p etc/openvpn/{server,easyrsa,client}
+  616  ls
+  617  cd etc/
+  618  cd openvpn/
+  619  ls
+  620  cd /etc/epenvpn
+  621  ls
+  622  cd /etc/openvpn/
+  623  ls
+  624  ls -ltr
+  625  cp -r * ~/ITS-vpn-build/etc/openvpn/
+  626  cd
+  627  cd ITS-vpn-build/etc/openvpn/
+  628  ls
+  629  du -hs
+  630  cd ..
+  631  ls
+  632  cd ..
+  633  pwd
+  634  mkdir bin 
+  635  mv ~/cert-setup.sh bin/
+  636  ls
+  637  ls ~/
+  638  pwd
+  639  git init 
+  640  yum install git 
+  641  git init 
+  642  git add * 
+  643  git commit 
+  644  pwd
+  645  cd etc/openvpn/easyrsa/
+  646  ls
+  647  rm -rf * 
+  648  cd ../..
+  649  pwd
+  650  cd ..
+  651  git commit 
+  652  git commit -a 
+  653  ls
+  654  exit
+  655  ls -ltr
+  656  chmod 755 cert-setup.sh 
+  657  ./cert-setup.sh 
+  658  cat cert-setup.sh 
+  659  vim cert-setup.sh 
+  660  tmux a
+  661  tmux 
+  662  pwd
+  663  ls -ltr
+  664  tmux a
+  665  pwd
+  666  tmux a
+  667  top
+  668  cd /var/log/
+  669  tail fail2ban.log
+  670  ls -ltr
+  671  ls -l fail2ban.log*
+  672  less fail2ban.log-20190811
+  673  vim /etc/ssh/sshd_config 
+  674  systemctl restart sshd 
+  675  vim /etc/ssh/sshd_config 
+  676  systemctl restart sshd
+  677  yum install snmpd 
+  678  yum install net-snmp 
+  679  cp khome-snmpd.conf /etc/snmp/snmpd.conf 
+  680  systemctl enable snmpd --now 
+  681  cd /etc/openvpn
+  682  ls
+  683  cd server/
+  684  ls
+  685  vim ../server/server.conf  
+  686  vim cert-setup.sh 
+  687  ./cert-setup.sh 
+  688  ls
+  689  systemctl enable openvpn-server@server --now 
+  690  systemctl status openvpn-server@server 
+  691  systemctl status openvpn-server@server =l
+  692  systemctl status openvpn-server@server -l
+  693  openvpn /etc/openvpn/server/server.conf 
+  694  vim cert-setup.sh 
+  695  ls -l /etc/openvpn/easyrsa/pki/private/
+  696  vim cert-setup.sh 
+  697  cd /etc/openvpn/easyrsa/
+  698  ls
+  699  ./easyrsa build-server-full vpn-server
+  700  ls
+  701  cd
+  702  cd ITS-vpn-build/bin/
+  703  vim cert-setup.sh 
+  704  cd /etc/openvpn/
+  705  ls
+  706  cd easyrsa/
+  707  ls
+  708  ./easyrsa q
+  709  ./easyrsa 
+  710  ./easyrsa builc-ca
+  711  ./easyrsa build-ca
+  712  cd
+  713  cd ITS-vpn-build/
+  714  cd bin/
+  715  ls
+  716  ./cert-setup.sh 
+  717  dig node1.vpn.immauss.com 
+  718  dig +trace www.immauss.com 
+  719  find / 
+  720  while true ; do  dig + trace www.cnn.com; dig + trace www.nascar.com
+  721  find / 
+  722  dig + trace www.immauss.com
+  723  dig +trace www.immauss.com 
+  724  ifconfig ppp0
+  725  ifconfig tun0 
+  726  firewall-cmd --add-service openvpn 
+  727  firewall-cmd --add-service openvpn --permanent 
+  728  iptables -nvL | less 
+  729  systemctl status 
+  730  systemctl list-units --state=failed
+  731  firewall-cmd --list-all 
+  732  firewall-cmd --add-service https --permanent 
+  733  firewall-cmd --reload 
+  734  cd ../etc/
+  735  ls
+  736  cd openvpn/
+  737  ls
+  738  cd auth/
+  739  ls
+  740  vim auth-ldap.conf 
+  741  pwd
+  742  tcpdump -ni lo port 389
+  743  tcpdump -nvi lo -s 1500 port 389
+  744  tcpdump -nvvvi lo -s 1500 port 389
+  745  lsof -i  | grep slapd
+  746  tcpdump -nvvvi lo -s 1500 port 389 or port 686
+  747  ls
+  748  vim ldap.conf 
+  749  cd /var/log/
+  750  ls
+  751  journalctl --follow 
+  752  kinit vpn-test 
+  753  kinit 
+  754  kinit --help
+  755  kinit 
+  756  cd /etc/openvpn/
+  757  ls
+  758  cd auth/
+  759  ls
+  760  vim ldap.conf 
+  761  kbdinfo 
+  762  kbdinfo  --help
+  763  kbdinfo  -V
+  764  man kbdinfo 
+  765  klist
+  766  klist --help 
+  767  klist -l -dfsa
+  768  klist -l -d
+  769  klist -l -f
+  770  klist -l -s
+  771  klist -l -a
+  772  klist -l -e
+  773  klist -e
+  774  klist -el
+  775  klist -e
+  776  vim ldap.conf 
+  777  ldapsearch -W 
+  778  ldapsearch -W -h node1.vpn.immauss.com 
+  779  ldapsearch -D "cn=directory manager" -W -p 389 -h node1.vpn.immauss..com -b "dc=immauss,dc=com" -s sub -x "(objectclass=*)"
+  780  ldapsearch -D "cn=directory admin" -W -p 389 -h node1.vpn.immauss..com -b "dc=immauss,dc=com" -s sub -x "(objectclass=*)"
+  781  ldapsearch -D "cn=directory admin" -W -p 389 -h node1.vpn.immauss.com -b "dc=immauss,dc=com" -s sub -x "(objectclass=*)"
+  782  ldapsearch -D "cn=directory manager" -W -p 389 -h node1.vpn.immauss.com -b "dc=immauss,dc=com" -s sub -x "(objectclass=*)"
+  783  ldapsearch -D "cn=directory manager" -W -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(objectclass=*)"
+  784  pwd
+  785  vim ldap.conf 
+  786  ldapsearch -D "cn=directory manager" -W -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(objectclass=*)" |less
+  787  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(objectclass=*)" |less
+  788  ldapsearch -D "cn=vpn-test manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(objectclass=*)" |less
+  789  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(objectclass=*)" |less
+  790  man ldapsearch 
+  791  vim ldap.conf 
+  792  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(samaccountname=vpn-test)" |less
+  793  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(samaccountname=vpn-test)" 
+  794  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(samaccountname=vpn-testf)" 
+  795  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(cn=vpn-test)" 
+  796  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(uid=vpn-test)" 
+  797  pwd
+  798  vim ldap.conf 
+  799  ldapsearch -D "cn=directory manager" -w '!!4everm0reVPN' -p 389 -h node1.vpn.immauss.com -b "dc=vpn,dc=immauss,dc=com" -s sub -x "(&(uid=vpn-test)(accountstatus=active))" 
+  800  vim ldap.conf 
+  801  find /
+  802  find / > /dev/null 
+  803  dig +trace www.immauss.com 
+  804  systemctl status openvpn-server@serv ver
+  805  systemctl status openvpn-server@server
+  806  openvpn /etc/openvpn/server/server.conf 
+  807  pwd
+  808  cd
+  809  cd /etc/openvpn/easyrsa/
+  810  ls
+  811  rm -rf * 
+  812  cd
+  813  ls -ltr
+  814  cd ITS-vpn-build/bin/
+  815  ./cert-setup.sh 
+  816  systemctl disable openvpn-server@server
+  817  ./cert-setup.sh 
+  818  openvpn /etc/openvpn/server/server.conf 
+  819  systemctl start openvpn-server@server
+  820  systemctl status 
+  821  clear
+  822  systemctl status openvpn-server@server 
+  823  watch systemctl status openvpn-server@server 
+  824  systemctl disable dirsrv@IMMAUSS-COM.service --now 
+  825  systemctl disable openvpn-server@server --now 
+  826  openvpn /etc/openvpn/server/server.conf 
+  827  cd /etc/openvpn/auth/
+  828  ls
+  829  vim auth-ldap.conf 
+  830  pwd
+  831  ls
+  832  vim ldap.conf 
+  833  openvpn /etc/openvpn/server/server.conf 
+  834  grep -i bind * 
+  835  vim auth-ldap.conf 
+  836  vim ldap.conf 
+  837  pwd
+  838  openvpn /etc/openvpn/server/server.conf 
+  839  vim ldap.conf 
+  840  openvpn /etc/openvpn/server/server.conf 
+  841  ls -ltr
+  842  less auth-ldap.conf 
+  843  vim ../server/server.conf 
+  844  ls
+  845  rm auth-ldap.conf 
+  846  rm ~/ITS-vpn-build/etc/openvpn/auth/auth-ldap.conf 
+  847  diff --side-by-side orig-ldap.conf ldap.conf | less 
+  848  vim ldap.conf 
+  849  openvpn /etc/openvpn/server/server.conf 
+  850  vim ldap.conf 
+  851  openvpn /etc/openvpn/server/server.conf 
+  852  openvpn --dpebug  /etc/openvpn/server/server.conf 
+  853  openvpn --debug  /etc/openvpn/server/server.conf 
+  854  man openvpn
+  855  openvpn --verb 9  /etc/openvpn/server/server.conf 
+  856  man openvpn
+  857  openvpn /etc/openvpn/server/server.conf --verb 6
+  858  openvpn --verb 6 /etc/openvpn/server/server.conf 
+  859  openvpn --verb 6 --conf /etc/openvpn/server/server.conf 
+  860  openvpn --verb 6 -Cf /etc/openvpn/server/server.conf 
+  861  openvpn --verb 6 -C /etc/openvpn/server/server.conf 
+  862  man openvpn
+  863  openvpn --verb 6 --config /etc/openvpn/server/server.conf 
+  864  openvpn --verb 9 --config /etc/openvpn/server/server.conf 
+  865  vim ldap.conf 
+  866  cd /var/log/dirsrv/
+  867  ls
+  868  cd slapd-VPN-IMMAUSS-COM/
+  869  ls
+  870  grep SRCH access
+  871  awk /SRCH/'{print $6}' 
+  872  awk /SRCH/'{print $6}'  access
+  873  grep SRCH access
+  874  awk /SRCH/'{print $6}'  access |
+  875  awk /SRCH/'{print $6}'  access 
+  876  grep vpn-test access
+  877  d 
+  878  cd
+  879  cd /etc/openvpn/auth/
+  880  ls
+  881  vim ldap.conf 
+  882  ldapsearch 
+  883  ldapsearch -h localhost-b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  884  systemctl status 
+  885  systemctl list-units --state=failed 
+  886  ldapsearch -h localhost-b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  887  ldapsearch -v -h localhost-b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  888  man ldapsearch 
+  889  klist 
+  890  ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  891  ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w "ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"4everm0re "(objectclass=*)"
+  892  ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w "ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=vpn,dc=immauss,dc=com -w 'ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w "ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"4everm0reVPN "(objectclass=*)"4everm0reVPN' "(objectclass=*)"4everm0reVPN "(objectclass=*)"
+  893  ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=...,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  894  ldapsearch -v -h localhost -b "cn=schema" -s base -D cn=admin,ou=vpn,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  895  ldapsearch -v -h localhost -b "cn=schema" -s base "(objectclass=*)"
+  896  kinit admin
+  897  klist
+  898  kinit -L
+  899  klist
+  900  kinit vpn-test
+  901  kinit admin
+  902  klist
+  903  ldapsearch 
+  904  ldapwhoami
+  905  ldapwhoami -h localhost 
+  906  man ldapsearch 
+  907  ldapsearch -v -h ldap://localhost -b "cn=schema" -s base -D cn=admin,ou=vpn,dc=immauss,dc=com -w '!!4everm0reVPN' "(objectclass=*)"
+  908  ldp
+  909  yum search ldp 
+  910  ldapsearch 
+  911  yum provides ldapsearch 
+  912  ip route 
+  913  yum update 
+  914  yum provides ldapsearch 
+  915  rpm -ql openldap-clients 
+  916  ldapurl 
+  917  ldapurl localhost
+  918  ldapsearch 
+  919  ldapsearch -h ldap://:389 
+  920  ldapsearch -h ldap://127.0.0.1:389 
+  921  nc 127.0.0.1 389
+  922  nc node1.vpn.immauss.com  389
+  923  firewall-cmd --list-all 
+  924  klist
+  925  yum provides ldp 
+  926  man ldapsearch 
+  927  cd
+  928  cd /etc/auth
+  929  cd /etc/openvpn/
+  930  ls
+  931  cd auth/
+  932  ls
+  933  vim ldap.conf 
+  934  grep -v "^#" ldap.conf 
+  935  egrep -v "^#|^ *$" ldap.conf 
+  936  egrep -v "^#|^ *$" ldap.conf  clean-ldap.conf
+  937  egrep -v "^#|^ *$" ldap.conf  > clean-ldap.conf
+  938  vim clean-ldap.conf 
+  939  cat clean-ldap.conf 
+  940  ls -ltr
+  941  find / -iname 
+  942  find / 
+  943  ls
+  944  pwd
+  945  ls
+  946  find . -iname "8ca*" 
+  947  find . -iname "*ca*" 
+  948  find . -iname "*vpn-server*" 
+  949  find . -iname "*.dh" 
+  950  find . -iname "*dh*" 
+  951  journalctl --follow 
+  952  systemctl status openvpn-server@server 
+  953  systemd-tty-ask-password-agent 
+  954  systemd-tty-ask-password-agent tool
+  955  systemd-tty-ask-password-agent 
+  956  cd
+  957  systemctl status openvpn-server@server 
+  958  systemd-tty-ask-password-agent
+  959  systemctl restart openvpn-server@server 
+  960  systemctl stop openvpn-server@server 
+  961  systemctl start openvpn-server@server
+  962  systemd-tty-ask-password-agent
+  963  systemctl disable -now openvpn-server@server 
+  964  systemctl disable openvpn-server@server --now  
+  965  systemctl status openvpn-server@server 
+  966  cd /var/log/
+  967  ls
+  968  openvpn --verb 9 --config /etc/openvpn/server/server.conf 
+  969  ls
+  970  ./cert-setup.sh 
+  971  cd ITS-vpn-build/
+  972  s
+  973  ls
+  974  cd bin/
+  975  ls
+  976  vim cert-setup.sh 
+  977  ./cert-setup.sh 
+  978  pwd
+  979  cd /var/log/
+  980  ls
+  981  tail secure
+  982  grep ldap secure
+  983  grep lap secure
+  984  cd dirsrv/
+  985  ls
+  986  cd slapd-VPN-IMMAUSS-COM/
+  987  ls
+  988  ls -ltr
+  989  tail -f access
+  990  grep vpn-test * 
+  991  ls
+  992  tail audit
+  993  tail errors
+  994  tail -f access
+  995  last
+  996  ls
+  997  history > history.txt
